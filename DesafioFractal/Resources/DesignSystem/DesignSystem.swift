@@ -8,11 +8,11 @@
 import Foundation
 
 struct DesignSystem {
-    struct tokens {}
+    struct Tokens {}
 }
 
-extension DesignSystem.tokens {
-    struct fonts {}
-    struct spacings {}
-    struct colors {}
+extension DesignSystem.Tokens {
+    struct Fonts {}
+    struct Spacings {}
+    struct Colors {}
 }

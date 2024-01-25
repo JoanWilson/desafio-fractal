@@ -10,12 +10,14 @@
 		851534CC2B62EE1100EB4680 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851534CB2B62EE1100EB4680 /* AppDelegate.swift */; };
 		851534CE2B62EE1100EB4680 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851534CD2B62EE1100EB4680 /* SceneDelegate.swift */; };
 		851534D02B62EE1100EB4680 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851534CF2B62EE1100EB4680 /* ViewController.swift */; };
-		851534D32B62EE1100EB4680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 851534D12B62EE1100EB4680 /* Main.storyboard */; };
 		851534D52B62EE1200EB4680 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 851534D42B62EE1200EB4680 /* Assets.xcassets */; };
 		851534D82B62EE1200EB4680 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 851534D62B62EE1200EB4680 /* LaunchScreen.storyboard */; };
 		851534E32B62EE1200EB4680 /* DesafioFractalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851534E22B62EE1200EB4680 /* DesafioFractalTests.swift */; };
 		851534ED2B62EE1200EB4680 /* DesafioFractalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851534EC2B62EE1200EB4680 /* DesafioFractalUITests.swift */; };
 		851534EF2B62EE1200EB4680 /* DesafioFractalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851534EE2B62EE1200EB4680 /* DesafioFractalUITestsLaunchTests.swift */; };
+		851535032B62FD1000EB4680 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851535022B62FD1000EB4680 /* DesignSystem.swift */; };
+		851535062B62FDB500EB4680 /* Colors+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851535052B62FDB500EB4680 /* Colors+.swift */; };
+		851535082B6301D400EB4680 /* Fonts+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851535072B6301D400EB4680 /* Fonts+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,6 @@
 		851534CB2B62EE1100EB4680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		851534CD2B62EE1100EB4680 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		851534CF2B62EE1100EB4680 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		851534D22B62EE1100EB4680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		851534D42B62EE1200EB4680 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		851534D72B62EE1200EB4680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		851534D92B62EE1200EB4680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +50,12 @@
 		851534E82B62EE1200EB4680 /* DesafioFractalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioFractalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		851534EC2B62EE1200EB4680 /* DesafioFractalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioFractalUITests.swift; sourceTree = "<group>"; };
 		851534EE2B62EE1200EB4680 /* DesafioFractalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioFractalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		851535022B62FD1000EB4680 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		851535052B62FDB500EB4680 /* Colors+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+.swift"; sourceTree = "<group>"; };
+		851535072B6301D400EB4680 /* Fonts+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fonts+.swift"; sourceTree = "<group>"; };
+		8515350A2B63034400EB4680 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		8515350B2B63034F00EB4680 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		8515350C2B63035500EB4680 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +106,12 @@
 		851534CA2B62EE1100EB4680 /* DesafioFractal */ = {
 			isa = PBXGroup;
 			children = (
-				851534CB2B62EE1100EB4680 /* AppDelegate.swift */,
-				851534CD2B62EE1100EB4680 /* SceneDelegate.swift */,
+				851535002B62F2B500EB4680 /* Presentation */,
+				851534FF2B62F2B100EB4680 /* Data */,
+				851534FE2B62F2AD00EB4680 /* Domain */,
+				851534FD2B62F29C00EB4680 /* Resources */,
+				851534FC2B62F28E00EB4680 /* Application */,
 				851534CF2B62EE1100EB4680 /* ViewController.swift */,
-				851534D12B62EE1100EB4680 /* Main.storyboard */,
-				851534D42B62EE1200EB4680 /* Assets.xcassets */,
 				851534D62B62EE1200EB4680 /* LaunchScreen.storyboard */,
 				851534D92B62EE1200EB4680 /* Info.plist */,
 			);
@@ -127,6 +135,66 @@
 			path = DesafioFractalUITests;
 			sourceTree = "<group>";
 		};
+		851534FC2B62F28E00EB4680 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				851534CB2B62EE1100EB4680 /* AppDelegate.swift */,
+				851534CD2B62EE1100EB4680 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		851534FD2B62F29C00EB4680 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				851535092B63031C00EB4680 /*  Fonts */,
+				851535042B62FDA600EB4680 /* DesignSystem */,
+				851534D42B62EE1200EB4680 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		851534FE2B62F2AD00EB4680 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		851534FF2B62F2B100EB4680 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		851535002B62F2B500EB4680 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		851535042B62FDA600EB4680 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				851535022B62FD1000EB4680 /* DesignSystem.swift */,
+				851535052B62FDB500EB4680 /* Colors+.swift */,
+				851535072B6301D400EB4680 /* Fonts+.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		851535092B63031C00EB4680 /*  Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8515350C2B63035500EB4680 /* Montserrat-Bold.ttf */,
+				8515350B2B63034F00EB4680 /* Montserrat-SemiBold.ttf */,
+				8515350A2B63034400EB4680 /* Montserrat-Medium.ttf */,
+			);
+			path = " Fonts";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +205,7 @@
 				851534C42B62EE1100EB4680 /* Sources */,
 				851534C52B62EE1100EB4680 /* Frameworks */,
 				851534C62B62EE1100EB4680 /* Resources */,
+				851535012B62F47000EB4680 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -233,7 +302,6 @@
 			files = (
 				851534D82B62EE1200EB4680 /* LaunchScreen.storyboard in Resources */,
 				851534D52B62EE1200EB4680 /* Assets.xcassets in Resources */,
-				851534D32B62EE1100EB4680 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,11 +321,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		851535012B62F47000EB4680 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		851534C42B62EE1100EB4680 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				851535032B62FD1000EB4680 /* DesignSystem.swift in Sources */,
+				851535062B62FDB500EB4680 /* Colors+.swift in Sources */,
+				851535082B6301D400EB4680 /* Fonts+.swift in Sources */,
 				851534D02B62EE1100EB4680 /* ViewController.swift in Sources */,
 				851534CC2B62EE1100EB4680 /* AppDelegate.swift in Sources */,
 				851534CE2B62EE1100EB4680 /* SceneDelegate.swift in Sources */,
@@ -297,14 +389,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		851534D12B62EE1100EB4680 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				851534D22B62EE1100EB4680 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		851534D62B62EE1200EB4680 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -443,11 +527,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F2MBMJ3PK6;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DesafioFractal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -471,11 +555,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F2MBMJ3PK6;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DesafioFractal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
