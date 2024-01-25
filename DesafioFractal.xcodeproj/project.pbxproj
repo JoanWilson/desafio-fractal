@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		851534CC2B62EE1100EB4680 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851534CB2B62EE1100EB4680 /* AppDelegate.swift */; };
+		851534CE2B62EE1100EB4680 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851534CD2B62EE1100EB4680 /* SceneDelegate.swift */; };
+		851534D02B62EE1100EB4680 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851534CF2B62EE1100EB4680 /* ViewController.swift */; };
+		851534D32B62EE1100EB4680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 851534D12B62EE1100EB4680 /* Main.storyboard */; };
+		851534D52B62EE1200EB4680 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 851534D42B62EE1200EB4680 /* Assets.xcassets */; };
+		851534D82B62EE1200EB4680 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 851534D62B62EE1200EB4680 /* LaunchScreen.storyboard */; };
+		851534E32B62EE1200EB4680 /* DesafioFractalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851534E22B62EE1200EB4680 /* DesafioFractalTests.swift */; };
+		851534ED2B62EE1200EB4680 /* DesafioFractalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851534EC2B62EE1200EB4680 /* DesafioFractalUITests.swift */; };
+		851534EF2B62EE1200EB4680 /* DesafioFractalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851534EE2B62EE1200EB4680 /* DesafioFractalUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		851534DF2B62EE1200EB4680 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 851534C02B62EE1100EB4680 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 851534C72B62EE1100EB4680;
+			remoteInfo = DesafioFractal;
+		};
+		851534E92B62EE1200EB4680 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 851534C02B62EE1100EB4680 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 851534C72B62EE1100EB4680;
+			remoteInfo = DesafioFractal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		851534C82B62EE1100EB4680 /* DesafioFractal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioFractal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		851534CB2B62EE1100EB4680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		851534CD2B62EE1100EB4680 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		851534CF2B62EE1100EB4680 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		851534D22B62EE1100EB4680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		851534D42B62EE1200EB4680 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		851534D72B62EE1200EB4680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		851534D92B62EE1200EB4680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		851534DE2B62EE1200EB4680 /* DesafioFractalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioFractalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		851534E22B62EE1200EB4680 /* DesafioFractalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioFractalTests.swift; sourceTree = "<group>"; };
+		851534E82B62EE1200EB4680 /* DesafioFractalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioFractalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		851534EC2B62EE1200EB4680 /* DesafioFractalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioFractalUITests.swift; sourceTree = "<group>"; };
+		851534EE2B62EE1200EB4680 /* DesafioFractalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioFractalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		851534C52B62EE1100EB4680 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		851534DB2B62EE1200EB4680 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		851534E52B62EE1200EB4680 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		851534BF2B62EE1100EB4680 = {
+			isa = PBXGroup;
+			children = (
+				851534CA2B62EE1100EB4680 /* DesafioFractal */,
+				851534E12B62EE1200EB4680 /* DesafioFractalTests */,
+				851534EB2B62EE1200EB4680 /* DesafioFractalUITests */,
+				851534C92B62EE1100EB4680 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		851534C92B62EE1100EB4680 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				851534C82B62EE1100EB4680 /* DesafioFractal.app */,
+				851534DE2B62EE1200EB4680 /* DesafioFractalTests.xctest */,
+				851534E82B62EE1200EB4680 /* DesafioFractalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		851534CA2B62EE1100EB4680 /* DesafioFractal */ = {
+			isa = PBXGroup;
+			children = (
+				851534CB2B62EE1100EB4680 /* AppDelegate.swift */,
+				851534CD2B62EE1100EB4680 /* SceneDelegate.swift */,
+				851534CF2B62EE1100EB4680 /* ViewController.swift */,
+				851534D12B62EE1100EB4680 /* Main.storyboard */,
+				851534D42B62EE1200EB4680 /* Assets.xcassets */,
+				851534D62B62EE1200EB4680 /* LaunchScreen.storyboard */,
+				851534D92B62EE1200EB4680 /* Info.plist */,
+			);
+			path = DesafioFractal;
+			sourceTree = "<group>";
+		};
+		851534E12B62EE1200EB4680 /* DesafioFractalTests */ = {
+			isa = PBXGroup;
+			children = (
+				851534E22B62EE1200EB4680 /* DesafioFractalTests.swift */,
+			);
+			path = DesafioFractalTests;
+			sourceTree = "<group>";
+		};
+		851534EB2B62EE1200EB4680 /* DesafioFractalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				851534EC2B62EE1200EB4680 /* DesafioFractalUITests.swift */,
+				851534EE2B62EE1200EB4680 /* DesafioFractalUITestsLaunchTests.swift */,
+			);
+			path = DesafioFractalUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		851534C72B62EE1100EB4680 /* DesafioFractal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 851534F22B62EE1200EB4680 /* Build configuration list for PBXNativeTarget "DesafioFractal" */;
+			buildPhases = (
+				851534C42B62EE1100EB4680 /* Sources */,
+				851534C52B62EE1100EB4680 /* Frameworks */,
+				851534C62B62EE1100EB4680 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DesafioFractal;
+			productName = DesafioFractal;
+			productReference = 851534C82B62EE1100EB4680 /* DesafioFractal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		851534DD2B62EE1200EB4680 /* DesafioFractalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 851534F52B62EE1200EB4680 /* Build configuration list for PBXNativeTarget "DesafioFractalTests" */;
+			buildPhases = (
+				851534DA2B62EE1200EB4680 /* Sources */,
+				851534DB2B62EE1200EB4680 /* Frameworks */,
+				851534DC2B62EE1200EB4680 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				851534E02B62EE1200EB4680 /* PBXTargetDependency */,
+			);
+			name = DesafioFractalTests;
+			productName = DesafioFractalTests;
+			productReference = 851534DE2B62EE1200EB4680 /* DesafioFractalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		851534E72B62EE1200EB4680 /* DesafioFractalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 851534F82B62EE1200EB4680 /* Build configuration list for PBXNativeTarget "DesafioFractalUITests" */;
+			buildPhases = (
+				851534E42B62EE1200EB4680 /* Sources */,
+				851534E52B62EE1200EB4680 /* Frameworks */,
+				851534E62B62EE1200EB4680 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				851534EA2B62EE1200EB4680 /* PBXTargetDependency */,
+			);
+			name = DesafioFractalUITests;
+			productName = DesafioFractalUITests;
+			productReference = 851534E82B62EE1200EB4680 /* DesafioFractalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		851534C02B62EE1100EB4680 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					851534C72B62EE1100EB4680 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					851534DD2B62EE1200EB4680 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 851534C72B62EE1100EB4680;
+					};
+					851534E72B62EE1200EB4680 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 851534C72B62EE1100EB4680;
+					};
+				};
+			};
+			buildConfigurationList = 851534C32B62EE1100EB4680 /* Build configuration list for PBXProject "DesafioFractal" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 851534BF2B62EE1100EB4680;
+			productRefGroup = 851534C92B62EE1100EB4680 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				851534C72B62EE1100EB4680 /* DesafioFractal */,
+				851534DD2B62EE1200EB4680 /* DesafioFractalTests */,
+				851534E72B62EE1200EB4680 /* DesafioFractalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		851534C62B62EE1100EB4680 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				851534D82B62EE1200EB4680 /* LaunchScreen.storyboard in Resources */,
+				851534D52B62EE1200EB4680 /* Assets.xcassets in Resources */,
+				851534D32B62EE1100EB4680 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		851534DC2B62EE1200EB4680 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		851534E62B62EE1200EB4680 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		851534C42B62EE1100EB4680 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				851534D02B62EE1100EB4680 /* ViewController.swift in Sources */,
+				851534CC2B62EE1100EB4680 /* AppDelegate.swift in Sources */,
+				851534CE2B62EE1100EB4680 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		851534DA2B62EE1200EB4680 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				851534E32B62EE1200EB4680 /* DesafioFractalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		851534E42B62EE1200EB4680 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				851534EF2B62EE1200EB4680 /* DesafioFractalUITestsLaunchTests.swift in Sources */,
+				851534ED2B62EE1200EB4680 /* DesafioFractalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		851534E02B62EE1200EB4680 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 851534C72B62EE1100EB4680 /* DesafioFractal */;
+			targetProxy = 851534DF2B62EE1200EB4680 /* PBXContainerItemProxy */;
+		};
+		851534EA2B62EE1200EB4680 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 851534C72B62EE1100EB4680 /* DesafioFractal */;
+			targetProxy = 851534E92B62EE1200EB4680 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		851534D12B62EE1100EB4680 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				851534D22B62EE1100EB4680 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		851534D62B62EE1200EB4680 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				851534D72B62EE1200EB4680 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		851534F02B62EE1200EB4680 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		851534F12B62EE1200EB4680 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		851534F32B62EE1200EB4680 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F2MBMJ3PK6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DesafioFractal/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joanwilson.DesafioFractal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		851534F42B62EE1200EB4680 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F2MBMJ3PK6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DesafioFractal/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joanwilson.DesafioFractal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		851534F62B62EE1200EB4680 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F2MBMJ3PK6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joanwilson.DesafioFractalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesafioFractal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DesafioFractal";
+			};
+			name = Debug;
+		};
+		851534F72B62EE1200EB4680 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F2MBMJ3PK6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joanwilson.DesafioFractalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesafioFractal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DesafioFractal";
+			};
+			name = Release;
+		};
+		851534F92B62EE1200EB4680 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F2MBMJ3PK6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joanwilson.DesafioFractalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DesafioFractal;
+			};
+			name = Debug;
+		};
+		851534FA2B62EE1200EB4680 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F2MBMJ3PK6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joanwilson.DesafioFractalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DesafioFractal;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		851534C32B62EE1100EB4680 /* Build configuration list for PBXProject "DesafioFractal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				851534F02B62EE1200EB4680 /* Debug */,
+				851534F12B62EE1200EB4680 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		851534F22B62EE1200EB4680 /* Build configuration list for PBXNativeTarget "DesafioFractal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				851534F32B62EE1200EB4680 /* Debug */,
+				851534F42B62EE1200EB4680 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		851534F52B62EE1200EB4680 /* Build configuration list for PBXNativeTarget "DesafioFractalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				851534F62B62EE1200EB4680 /* Debug */,
+				851534F72B62EE1200EB4680 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		851534F82B62EE1200EB4680 /* Build configuration list for PBXNativeTarget "DesafioFractalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				851534F92B62EE1200EB4680 /* Debug */,
+				851534FA2B62EE1200EB4680 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 851534C02B62EE1100EB4680 /* Project object */;
+}
