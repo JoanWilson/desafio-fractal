@@ -30,10 +30,9 @@
 		854896162B6450F50014C180 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854896152B6450F50014C180 /* Client.swift */; };
 		85AFC85D2B63866F00E9DE5F /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFC85C2B63866F00E9DE5F /* Beer.swift */; };
 		85AFC8612B6387CD00E9DE5F /* BeerRemoteRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFC8602B6387CD00E9DE5F /* BeerRemoteRepositoryProtocol.swift */; };
-		85AFC8642B6388D700E9DE5F /* BeerRemoteUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFC8632B6388D700E9DE5F /* BeerRemoteUseCases.swift */; };
+		85AFC8642B6388D700E9DE5F /* BeerRemoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFC8632B6388D700E9DE5F /* BeerRemoteUseCase.swift */; };
 		85AFC8662B63893000E9DE5F /* BeerLocalRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFC8652B63893000E9DE5F /* BeerLocalRepositoryProtocol.swift */; };
 		85AFC8682B63894E00E9DE5F /* BeerLocalUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFC8672B63894E00E9DE5F /* BeerLocalUseCases.swift */; };
-		85AFC8702B638E4400E9DE5F /* BeerRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFC86F2B638E4400E9DE5F /* BeerRemoteRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,10 +80,9 @@
 		854896152B6450F50014C180 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		85AFC85C2B63866F00E9DE5F /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		85AFC8602B6387CD00E9DE5F /* BeerRemoteRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRemoteRepositoryProtocol.swift; sourceTree = "<group>"; };
-		85AFC8632B6388D700E9DE5F /* BeerRemoteUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRemoteUseCases.swift; sourceTree = "<group>"; };
+		85AFC8632B6388D700E9DE5F /* BeerRemoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRemoteUseCase.swift; sourceTree = "<group>"; };
 		85AFC8652B63893000E9DE5F /* BeerLocalRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerLocalRepositoryProtocol.swift; sourceTree = "<group>"; };
 		85AFC8672B63894E00E9DE5F /* BeerLocalUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerLocalUseCases.swift; sourceTree = "<group>"; };
-		85AFC86F2B638E4400E9DE5F /* BeerRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRemoteRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,7 +292,7 @@
 		85AFC8622B63888900E9DE5F /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				85AFC8632B6388D700E9DE5F /* BeerRemoteUseCases.swift */,
+				85AFC8632B6388D700E9DE5F /* BeerRemoteUseCase.swift */,
 				85AFC8672B63894E00E9DE5F /* BeerLocalUseCases.swift */,
 			);
 			path = UseCases;
@@ -304,7 +302,6 @@
 			isa = PBXGroup;
 			children = (
 				854896152B6450F50014C180 /* Client.swift */,
-				85AFC86F2B638E4400E9DE5F /* BeerRemoteRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -473,7 +470,6 @@
 				85AFC85D2B63866F00E9DE5F /* Beer.swift in Sources */,
 				851535202B63348200EB4680 /* Images+.swift in Sources */,
 				851535152B63190A00EB4680 /* BeerListViewModel.swift in Sources */,
-				85AFC8702B638E4400E9DE5F /* BeerRemoteRepository.swift in Sources */,
 				854896162B6450F50014C180 /* Client.swift in Sources */,
 				851535082B6301D400EB4680 /* Fonts+.swift in Sources */,
 				85AFC8612B6387CD00E9DE5F /* BeerRemoteRepositoryProtocol.swift in Sources */,
@@ -481,7 +477,7 @@
 				85AFC8682B63894E00E9DE5F /* BeerLocalUseCases.swift in Sources */,
 				851534CC2B62EE1100EB4680 /* AppDelegate.swift in Sources */,
 				851534CE2B62EE1100EB4680 /* SceneDelegate.swift in Sources */,
-				85AFC8642B6388D700E9DE5F /* BeerRemoteUseCases.swift in Sources */,
+				85AFC8642B6388D700E9DE5F /* BeerRemoteUseCase.swift in Sources */,
 				8515350E2B6313F000EB4680 /* FontsEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
