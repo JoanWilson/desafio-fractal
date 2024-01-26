@@ -9,6 +9,8 @@ import Foundation
 
 final class BeerRemoteRepository: BeerRemoteRepositoryProtocol {
     
+    
+    
     func listBeers(page: Int, amount: Int?) -> [Beer] {
         return []
     }
