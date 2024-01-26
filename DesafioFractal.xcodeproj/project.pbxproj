@@ -23,6 +23,10 @@
 		851535132B6318EB00EB4680 /* BeerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851535122B6318EB00EB4680 /* BeerListView.swift */; };
 		851535152B63190A00EB4680 /* BeerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851535142B63190A00EB4680 /* BeerListViewModel.swift */; };
 		851535192B631BC900EB4680 /* ViewCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851535182B631BC900EB4680 /* ViewCoding.swift */; };
+		8515351A2B63226D00EB4680 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8515350A2B63034400EB4680 /* Montserrat-Medium.ttf */; };
+		8515351B2B63226D00EB4680 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8515350C2B63035500EB4680 /* Montserrat-Bold.ttf */; };
+		8515351C2B63226D00EB4680 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8515350B2B63034F00EB4680 /* Montserrat-SemiBold.ttf */; };
+		851535202B63348200EB4680 /* Images+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8515351F2B63348200EB4680 /* Images+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,7 @@
 		851535122B6318EB00EB4680 /* BeerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListView.swift; sourceTree = "<group>"; };
 		851535142B63190A00EB4680 /* BeerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewModel.swift; sourceTree = "<group>"; };
 		851535182B631BC900EB4680 /* ViewCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoding.swift; sourceTree = "<group>"; };
+		8515351F2B63348200EB4680 /* Images+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Images+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +199,7 @@
 				851535022B62FD1000EB4680 /* DesignSystem.swift */,
 				851535052B62FDB500EB4680 /* Colors+.swift */,
 				851535072B6301D400EB4680 /* Fonts+.swift */,
+				8515351F2B63348200EB4680 /* Images+.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -339,8 +345,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8515351B2B63226D00EB4680 /* Montserrat-Bold.ttf in Resources */,
 				851534D82B62EE1200EB4680 /* LaunchScreen.storyboard in Resources */,
+				8515351A2B63226D00EB4680 /* Montserrat-Medium.ttf in Resources */,
 				851534D52B62EE1200EB4680 /* Assets.xcassets in Resources */,
+				8515351C2B63226D00EB4680 /* Montserrat-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +400,7 @@
 				851535192B631BC900EB4680 /* ViewCoding.swift in Sources */,
 				851535132B6318EB00EB4680 /* BeerListView.swift in Sources */,
 				851535112B6318E100EB4680 /* BeerListViewController.swift in Sources */,
+				851535202B63348200EB4680 /* Images+.swift in Sources */,
 				851535152B63190A00EB4680 /* BeerListViewModel.swift in Sources */,
 				851535082B6301D400EB4680 /* Fonts+.swift in Sources */,
 				851534D02B62EE1100EB4680 /* ViewController.swift in Sources */,
@@ -578,6 +588,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -606,6 +617,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

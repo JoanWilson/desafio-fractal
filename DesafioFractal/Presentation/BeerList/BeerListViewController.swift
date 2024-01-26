@@ -18,12 +18,7 @@ final class BeerListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupNavigationBar()
-    }
-    
-    private func setupNavigationBar() {
         self.title = "BeerList"
-        
-        self.navigationController?.navigationBar.backgroundColor = DesignSystem.Tokens.Colors.primary
     }
+  
 }

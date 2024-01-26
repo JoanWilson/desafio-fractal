@@ -15,7 +15,7 @@ final class BeerListView: UIView {
     }
     
     private func setupView() {
-        self.backgroundColor = DesignSystem.Tokens.Colors.white
+        self.backgroundColor = DesignSystem.Tokens.Colors.secondary
     }
     
 }
