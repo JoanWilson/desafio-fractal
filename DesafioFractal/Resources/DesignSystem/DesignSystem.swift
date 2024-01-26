@@ -13,6 +13,6 @@ struct DesignSystem {
 
 extension DesignSystem.Tokens {
     struct Fonts {}
-    struct Spacings {}
+    struct Images {}
     struct Colors {}
 }
