@@ -7,7 +7,6 @@
 
 import Foundation
 
-protocol BeerRemoteRepositoryProtocol {
-    func listBeers(page: Int, amount: Int?) -> [Beer]
-    func searchBeer(byName inputText: String) -> [Beer]
+protocol BeerRemoteRepository {
+    func getBeers(page: Int, amount: Int, completion: @escaping (Result<[Beer], Error>) -> Void)
 }
