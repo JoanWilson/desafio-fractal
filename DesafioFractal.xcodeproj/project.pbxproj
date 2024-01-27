@@ -141,11 +141,7 @@
 		851534CA2B62EE1100EB4680 /* DesafioFractal */ = {
 			isa = PBXGroup;
 			children = (
-				851535172B631BB600EB4680 /* Common */,
-				851535162B631BA000EB4680 /* Utils */,
-				851535002B62F2B500EB4680 /* Presentation */,
-				851534FF2B62F2B100EB4680 /* Data */,
-				851534FE2B62F2AD00EB4680 /* Domain */,
+				854083D12B64DF9300EDA0CB /* Source */,
 				851534FD2B62F29C00EB4680 /* Resources */,
 				851534FC2B62F28E00EB4680 /* Application */,
 				851534D92B62EE1200EB4680 /* Info.plist */,
@@ -273,6 +269,18 @@
 				854083CD2B64DC7500EDA0CB /* UIImageView+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		854083D12B64DF9300EDA0CB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				851535162B631BA000EB4680 /* Utils */,
+				851535172B631BB600EB4680 /* Common */,
+				851534FE2B62F2AD00EB4680 /* Domain */,
+				851534FF2B62F2B100EB4680 /* Data */,
+				851535002B62F2B500EB4680 /* Presentation */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		85AFC85B2B63852F00E9DE5F /* LaunchScreen */ = {

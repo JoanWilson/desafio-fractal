@@ -20,6 +20,7 @@ final class BeerListView: UIView {
         tableView.backgroundColor = DesignSystem.Colors.white
         tableView.separatorStyle = .none
         tableView.contentInsetAdjustmentBehavior = .never
+        tableView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 40, right: 0)
         
         return tableView
     }()

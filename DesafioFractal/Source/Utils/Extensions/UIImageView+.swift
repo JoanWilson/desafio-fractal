@@ -12,12 +12,10 @@ extension UIImageView {
         let cache = cache ?? URLCache.shared
         let request = URLRequest(url: url)
         if let data = cache.cachedResponse(for: request)?.data, let image = UIImage(data: data) {
-            print("NAO Fez request")
             DispatchQueue.main.async {
                 self.image = image
             }
         } else {
-            print("Fez request")
             URLSession.shared.dataTask(with: request, completionHandler: { (data, response, _) in
                 if let data = data,
                     let response = response, ((response as? HTTPURLResponse)?.statusCode ?? 500) < 300,
