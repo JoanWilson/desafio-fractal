@@ -17,7 +17,7 @@ final class BeerListView: UIView {
             BeerListTableViewCell.self,
             forCellReuseIdentifier: BeerListTableViewCell.identifier
         )
-        tableView.backgroundColor = DesignSystem.Tokens.Colors.white
+        tableView.backgroundColor = DesignSystem.Colors.white
         tableView.separatorStyle = .none
         tableView.contentInsetAdjustmentBehavior = .never
         
@@ -31,7 +31,7 @@ final class BeerListView: UIView {
     }
     
     private func setupView() {
-        self.backgroundColor = DesignSystem.Tokens.Colors.secondary
+        self.backgroundColor = DesignSystem.Colors.secondary
     }
     
 }

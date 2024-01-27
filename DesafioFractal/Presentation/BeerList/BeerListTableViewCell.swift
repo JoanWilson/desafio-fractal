@@ -14,18 +14,19 @@ final class BeerListTableViewCell: UITableViewCell {
     private lazy var cellContent: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = DesignSystem.Tokens.Colors.background
+        view.backgroundColor = DesignSystem.Colors.background
         view.layer.cornerRadius = 8
         
         return view
     }()
     
     private lazy var image: UIImageView = {
-        let image = DesignSystem.Tokens.Images.mockImageCell
+        let image = DesignSystem.Images.mockImageCell
         let imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
         imageView.backgroundColor = .clear
+        imageView.clipsToBounds = true
         
         return imageView
     }()
@@ -34,7 +35,7 @@ final class BeerListTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "AB: 01"
-        label.font = DesignSystem.Tokens.Fonts.montserratBold(18)
+        label.font = DesignSystem.Fonts.montserratBold(18)
         
         return label
     }()
@@ -43,8 +44,8 @@ final class BeerListTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Triple Dry Hopped Imperial Red."
-        label.font = DesignSystem.Tokens.Fonts.montserratMedium(14)
-        label.textColor = DesignSystem.Tokens.Colors.gray
+        label.font = DesignSystem.Fonts.montserratMedium(14)
+        label.textColor = DesignSystem.Colors.gray
         
         return label
     }()
@@ -58,8 +59,8 @@ final class BeerListTableViewCell: UITableViewCell {
         return stack
     }()
     
-    lazy var arrowIcon: UIImageView = {
-        let image = DesignSystem.Tokens.Images.arrowRight
+    private lazy var arrowIcon: UIImageView = {
+        let image = DesignSystem.Images.arrowRight
         let imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
@@ -70,9 +71,21 @@ final class BeerListTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.backgroundColor = DesignSystem.Tokens.Colors.white
+        self.backgroundColor = DesignSystem.Colors.white
         buildLayout()
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 8, left: 16, bottom: 0, right: 16))
+    }
+    
+    public func configureCell(using beer: Beer) {
+        title.text = beer.name
+        subTitle.text = beer.tagline
+        
+        guard let beerImageURLString = beer.imageURL,
+              let beerImageURL = URL(string: beerImageURLString) else {
+            print("Beer Image URL Not Found")
+            return
+        }
+        image.load(url: beerImageURL)
     }
 }
 
