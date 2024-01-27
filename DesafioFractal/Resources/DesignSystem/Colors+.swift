@@ -17,6 +17,10 @@ extension DesignSystem.Colors {
         return UIColor(named: "Colors/secondary")!
     }
     
+    static var lightGray: UIColor {
+        return UIColor(named: "Colors/lightGray")!
+    }
+    
     static var gray: UIColor {
         return UIColor(named: "Colors/gray")!
     }
