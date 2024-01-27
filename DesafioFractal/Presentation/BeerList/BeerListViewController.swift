@@ -20,9 +20,10 @@ final class BeerListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "BeerList"
+        setupTableView()
         
         client.getBeers(page: 1, amount: 1) { [weak self] result in
-            guard let self = self else { return }
+            guard self != nil else { return }
             
             switch result {
             case .success(let beers):
@@ -32,5 +33,34 @@ final class BeerListViewController: UIViewController {
             }
         }
     }
-  
+    
+    private func setupTableView() {
+        contentView.tableView.dataSource = self
+        contentView.tableView.delegate = self
+    }
+}
+
+extension BeerListViewController: UITableViewDelegate {
+    
+}
+
+extension BeerListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80 
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: BeerListTableViewCell.identifier,
+            for: indexPath
+        ) as? BeerListTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        return cell
+    }
 }

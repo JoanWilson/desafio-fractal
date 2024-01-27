@@ -28,6 +28,7 @@
 		8515351C2B63226D00EB4680 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8515350B2B63034F00EB4680 /* Montserrat-SemiBold.ttf */; };
 		851535202B63348200EB4680 /* Images+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8515351F2B63348200EB4680 /* Images+.swift */; };
 		854896162B6450F50014C180 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854896152B6450F50014C180 /* Client.swift */; };
+		854896192B64839D0014C180 /* BeerListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854896182B64839D0014C180 /* BeerListTableViewCell.swift */; };
 		85AFC85D2B63866F00E9DE5F /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFC85C2B63866F00E9DE5F /* Beer.swift */; };
 		85AFC8612B6387CD00E9DE5F /* BeerRemoteRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFC8602B6387CD00E9DE5F /* BeerRemoteRepositoryProtocol.swift */; };
 		85AFC8642B6388D700E9DE5F /* BeerRemoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFC8632B6388D700E9DE5F /* BeerRemoteUseCase.swift */; };
@@ -78,6 +79,7 @@
 		851535182B631BC900EB4680 /* ViewCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoding.swift; sourceTree = "<group>"; };
 		8515351F2B63348200EB4680 /* Images+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Images+.swift"; sourceTree = "<group>"; };
 		854896152B6450F50014C180 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		854896182B64839D0014C180 /* BeerListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListTableViewCell.swift; sourceTree = "<group>"; };
 		85AFC85C2B63866F00E9DE5F /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		85AFC8602B6387CD00E9DE5F /* BeerRemoteRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRemoteRepositoryProtocol.swift; sourceTree = "<group>"; };
 		85AFC8632B6388D700E9DE5F /* BeerRemoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRemoteUseCase.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				851535102B6318E100EB4680 /* BeerListViewController.swift */,
 				851535122B6318EB00EB4680 /* BeerListView.swift */,
 				851535142B63190A00EB4680 /* BeerListViewModel.swift */,
+				854896182B64839D0014C180 /* BeerListTableViewCell.swift */,
 			);
 			path = BeerList;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				851535202B63348200EB4680 /* Images+.swift in Sources */,
 				851535152B63190A00EB4680 /* BeerListViewModel.swift in Sources */,
 				854896162B6450F50014C180 /* Client.swift in Sources */,
+				854896192B64839D0014C180 /* BeerListTableViewCell.swift in Sources */,
 				851535082B6301D400EB4680 /* Fonts+.swift in Sources */,
 				85AFC8612B6387CD00E9DE5F /* BeerRemoteRepositoryProtocol.swift in Sources */,
 				851534D02B62EE1100EB4680 /* ViewController.swift in Sources */,
