@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension DesignSystem.Tokens.Colors {
+extension DesignSystem.Colors {
     
     static var primary: UIColor {
         return UIColor(named: "Colors/primary")!

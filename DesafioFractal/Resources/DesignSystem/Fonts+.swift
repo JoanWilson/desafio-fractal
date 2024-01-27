@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension DesignSystem.Tokens.Fonts {
+extension DesignSystem.Fonts {
     
     static func montserratMedium(_ size: CGFloat = UIFont.labelFontSize) -> UIFont {
         guard let customFont = UIFont(name: FontsEnum.montserratMedium(), size: size) else {

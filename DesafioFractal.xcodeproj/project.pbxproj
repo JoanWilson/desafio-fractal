@@ -27,7 +27,11 @@
 		8515351B2B63226D00EB4680 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8515350C2B63035500EB4680 /* Montserrat-Bold.ttf */; };
 		8515351C2B63226D00EB4680 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8515350B2B63034F00EB4680 /* Montserrat-SemiBold.ttf */; };
 		851535202B63348200EB4680 /* Images+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8515351F2B63348200EB4680 /* Images+.swift */; };
-		854896162B6450F50014C180 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854896152B6450F50014C180 /* Client.swift */; };
+		854083CB2B64D43900EDA0CB /* BeerListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854083CA2B64D43900EDA0CB /* BeerListFactory.swift */; };
+		854083CE2B64DC7600EDA0CB /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854083CD2B64DC7500EDA0CB /* UIImageView+.swift */; };
+		854083D02B64DF3F00EDA0CB /* ErrorClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854083CF2B64DF3F00EDA0CB /* ErrorClient.swift */; };
+		854896162B6450F50014C180 /* PunkApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854896152B6450F50014C180 /* PunkApiClient.swift */; };
+		854896192B64839D0014C180 /* BeerListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854896182B64839D0014C180 /* BeerListTableViewCell.swift */; };
 		85AFC85D2B63866F00E9DE5F /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFC85C2B63866F00E9DE5F /* Beer.swift */; };
 		85AFC8612B6387CD00E9DE5F /* BeerRemoteRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFC8602B6387CD00E9DE5F /* BeerRemoteRepositoryProtocol.swift */; };
 		85AFC8642B6388D700E9DE5F /* BeerRemoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFC8632B6388D700E9DE5F /* BeerRemoteUseCase.swift */; };
@@ -77,7 +81,11 @@
 		851535142B63190A00EB4680 /* BeerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewModel.swift; sourceTree = "<group>"; };
 		851535182B631BC900EB4680 /* ViewCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoding.swift; sourceTree = "<group>"; };
 		8515351F2B63348200EB4680 /* Images+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Images+.swift"; sourceTree = "<group>"; };
-		854896152B6450F50014C180 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		854083CA2B64D43900EDA0CB /* BeerListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListFactory.swift; sourceTree = "<group>"; };
+		854083CD2B64DC7500EDA0CB /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		854083CF2B64DF3F00EDA0CB /* ErrorClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorClient.swift; sourceTree = "<group>"; };
+		854896152B6450F50014C180 /* PunkApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunkApiClient.swift; sourceTree = "<group>"; };
+		854896182B64839D0014C180 /* BeerListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListTableViewCell.swift; sourceTree = "<group>"; };
 		85AFC85C2B63866F00E9DE5F /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		85AFC8602B6387CD00E9DE5F /* BeerRemoteRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRemoteRepositoryProtocol.swift; sourceTree = "<group>"; };
 		85AFC8632B6388D700E9DE5F /* BeerRemoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRemoteUseCase.swift; sourceTree = "<group>"; };
@@ -133,12 +141,7 @@
 		851534CA2B62EE1100EB4680 /* DesafioFractal */ = {
 			isa = PBXGroup;
 			children = (
-				854896142B6450A80014C180 /* Infrastructure */,
-				851535172B631BB600EB4680 /* Common */,
-				851535162B631BA000EB4680 /* Utils */,
-				851535002B62F2B500EB4680 /* Presentation */,
-				851534FF2B62F2B100EB4680 /* Data */,
-				851534FE2B62F2AD00EB4680 /* Domain */,
+				854083D12B64DF9300EDA0CB /* Source */,
 				851534FD2B62F29C00EB4680 /* Resources */,
 				851534FC2B62F28E00EB4680 /* Application */,
 				851534D92B62EE1200EB4680 /* Info.plist */,
@@ -195,7 +198,7 @@
 		851534FF2B62F2B100EB4680 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				85AFC86E2B638E2D00E9DE5F /* Repositories */,
+				85AFC86E2B638E2D00E9DE5F /* Networking */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -235,9 +238,11 @@
 		8515350F2B6318D000EB4680 /* BeerList */ = {
 			isa = PBXGroup;
 			children = (
-				851535102B6318E100EB4680 /* BeerListViewController.swift */,
 				851535122B6318EB00EB4680 /* BeerListView.swift */,
+				851535102B6318E100EB4680 /* BeerListViewController.swift */,
 				851535142B63190A00EB4680 /* BeerListViewModel.swift */,
+				854896182B64839D0014C180 /* BeerListTableViewCell.swift */,
+				854083CA2B64D43900EDA0CB /* BeerListFactory.swift */,
 			);
 			path = BeerList;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 		851535162B631BA000EB4680 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				854083CC2B64DC6800EDA0CB /* Extensions */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -257,11 +263,24 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		854896142B6450A80014C180 /* Infrastructure */ = {
+		854083CC2B64DC6800EDA0CB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				854083CD2B64DC7500EDA0CB /* UIImageView+.swift */,
 			);
-			path = Infrastructure;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		854083D12B64DF9300EDA0CB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				851535162B631BA000EB4680 /* Utils */,
+				851535172B631BB600EB4680 /* Common */,
+				851534FE2B62F2AD00EB4680 /* Domain */,
+				851534FF2B62F2B100EB4680 /* Data */,
+				851535002B62F2B500EB4680 /* Presentation */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		85AFC85B2B63852F00E9DE5F /* LaunchScreen */ = {
@@ -298,12 +317,13 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
-		85AFC86E2B638E2D00E9DE5F /* Repositories */ = {
+		85AFC86E2B638E2D00E9DE5F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				854896152B6450F50014C180 /* Client.swift */,
+				854896152B6450F50014C180 /* PunkApiClient.swift */,
+				854083CF2B64DF3F00EDA0CB /* ErrorClient.swift */,
 			);
-			path = Repositories;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,10 +490,14 @@
 				85AFC85D2B63866F00E9DE5F /* Beer.swift in Sources */,
 				851535202B63348200EB4680 /* Images+.swift in Sources */,
 				851535152B63190A00EB4680 /* BeerListViewModel.swift in Sources */,
-				854896162B6450F50014C180 /* Client.swift in Sources */,
+				854083CE2B64DC7600EDA0CB /* UIImageView+.swift in Sources */,
+				854896162B6450F50014C180 /* PunkApiClient.swift in Sources */,
+				854896192B64839D0014C180 /* BeerListTableViewCell.swift in Sources */,
 				851535082B6301D400EB4680 /* Fonts+.swift in Sources */,
 				85AFC8612B6387CD00E9DE5F /* BeerRemoteRepositoryProtocol.swift in Sources */,
 				851534D02B62EE1100EB4680 /* ViewController.swift in Sources */,
+				854083D02B64DF3F00EDA0CB /* ErrorClient.swift in Sources */,
+				854083CB2B64D43900EDA0CB /* BeerListFactory.swift in Sources */,
 				85AFC8682B63894E00E9DE5F /* BeerLocalUseCases.swift in Sources */,
 				851534CC2B62EE1100EB4680 /* AppDelegate.swift in Sources */,
 				851534CE2B62EE1100EB4680 /* SceneDelegate.swift in Sources */,
@@ -660,7 +684,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -689,7 +713,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
