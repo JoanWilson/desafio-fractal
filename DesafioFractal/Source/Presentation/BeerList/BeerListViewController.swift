@@ -52,8 +52,14 @@ final class BeerListViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self.contentView.tableView.reloadData()
+                self.showTableViewLoaded()
             }
         }.store(in: &viewModel.cancellable)
+    }
+    
+    private func showTableViewLoaded() {
+        contentView.tableView.isHidden = false
+        contentView.loadingIndicator.stopAnimating()
     }
 }
 

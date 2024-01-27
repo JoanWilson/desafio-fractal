@@ -36,6 +36,7 @@ final class BeerListTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "AB: 01"
         label.font = DesignSystem.Fonts.montserratBold(18)
+        label.textColor = DesignSystem.Colors.gray
         
         return label
     }()
@@ -45,7 +46,7 @@ final class BeerListTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Triple Dry Hopped Imperial Red."
         label.font = DesignSystem.Fonts.montserratMedium(14)
-        label.textColor = DesignSystem.Colors.gray
+        label.textColor = DesignSystem.Colors.lightGray
         
         return label
     }()
