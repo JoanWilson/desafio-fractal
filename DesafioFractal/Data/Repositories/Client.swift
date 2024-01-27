@@ -11,7 +11,7 @@ enum ErrorClient: Error {
     case invalidBaseURL
 }
 
-class PunkApiClient: BeerRemoteRepository {
+final class PunkApiClient: BeerRemoteRepository {
     private let apiURL: String = "https://api.punkapi.com/v2/beers?page=1"
     private let session: URLSession = .init(configuration: .default)
     

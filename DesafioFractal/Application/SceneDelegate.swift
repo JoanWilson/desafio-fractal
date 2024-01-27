@@ -16,6 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         let entryViewController: UIViewController = BeerListViewController()
         let navigationController: UINavigationController = UINavigationController(rootViewController: entryViewController)
+        
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.window = window

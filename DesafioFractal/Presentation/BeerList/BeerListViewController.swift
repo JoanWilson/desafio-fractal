@@ -17,9 +17,19 @@ final class BeerListViewController: UIViewController {
         self.view = contentView
     }
     
+    lazy var navView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .red
+        
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "BeerList"
+        
+        setupNavigationBar()
         setupTableView()
         
         client.getBeers(page: 1, amount: 1) { [weak self] result in
@@ -34,6 +44,20 @@ final class BeerListViewController: UIViewController {
         }
     }
     
+    private func setupNavigationBar() {
+        let navigationbarAppearance = UINavigationBarAppearance()
+        
+        navigationbarAppearance.backgroundColor = DesignSystem.Tokens.Colors.primary
+        let montserratFont: UIFont = DesignSystem.Tokens.Fonts.montserratSemiBold(20)
+        navigationbarAppearance.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: DesignSystem.Tokens.Colors.white,
+            NSAttributedString.Key.font: montserratFont
+        ]
+        
+        self.navigationController?.navigationBar.standardAppearance = navigationbarAppearance
+        self.navigationController?.navigationBar.backgroundColor = DesignSystem.Tokens.Colors.primary
+    }
+    
     private func setupTableView() {
         contentView.tableView.dataSource = self
         contentView.tableView.delegate = self
@@ -41,6 +65,9 @@ final class BeerListViewController: UIViewController {
 }
 
 extension BeerListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
     
 }
 
@@ -50,7 +77,7 @@ extension BeerListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80 
+        return 90
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,6 +87,7 @@ extension BeerListViewController: UITableViewDataSource {
         ) as? BeerListTableViewCell else {
             return UITableViewCell()
         }
+        cell.selectionStyle = .none
         
         return cell
     }

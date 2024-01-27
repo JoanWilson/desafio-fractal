@@ -17,8 +17,9 @@ final class BeerListView: UIView {
             BeerListTableViewCell.self,
             forCellReuseIdentifier: BeerListTableViewCell.identifier
         )
-        tableView.backgroundColor = DesignSystem.Tokens.Colors.secondary
+        tableView.backgroundColor = DesignSystem.Tokens.Colors.white
         tableView.separatorStyle = .none
+        tableView.contentInsetAdjustmentBehavior = .never
         
         return tableView
     }()
@@ -47,9 +48,9 @@ extension BeerListView: ViewCoding {
     private func tableViewConstraints() {
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
-            tableView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor)
+            tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
         ])
     }
 }
