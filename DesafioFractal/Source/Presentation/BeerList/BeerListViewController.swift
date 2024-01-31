@@ -9,12 +9,11 @@ import UIKit
 
 final class BeerListViewController: UIViewController {
     
-    private var contentView: BeerListView = .init()
-    private let client: PunkApiClient = .init()
-    
+    private var contentView: BeerListView
     private var viewModel: BeerListViewModel
     
-    init(viewModel: BeerListViewModel) {
+    init(view: BeerListView, viewModel: BeerListViewModel) {
+        self.contentView = view
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -30,7 +29,6 @@ final class BeerListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "BeerList"
-        
         setupNavigationBar()
         setupTableView()
         setupBinders()
@@ -58,8 +56,8 @@ final class BeerListViewController: UIViewController {
     }
     
     private func showTableViewLoaded() {
-        contentView.tableView.isHidden = false
         contentView.loadingIndicator.stopAnimating()
+        contentView.tableView.isHidden = false
     }
 }
 
@@ -70,7 +68,7 @@ extension BeerListViewController {
         navigationbarAppearance.backgroundColor = DesignSystem.Colors.primary
         let montserratFont: UIFont = DesignSystem.Fonts.montserratSemiBold(20)
         navigationbarAppearance.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: DesignSystem.Colors.white,
+            NSAttributedString.Key.foregroundColor: DesignSystem.Colors.whiteFont,
             NSAttributedString.Key.font: montserratFont
         ]
         
@@ -88,7 +86,7 @@ extension BeerListViewController {
             action: #selector(openSearchViewController)
         )
         
-        searchButton.tintColor = DesignSystem.Colors.white
+        searchButton.tintColor = DesignSystem.Colors.whiteFont
         
         self.navigationItem.rightBarButtonItem = searchButton
     }
@@ -100,7 +98,10 @@ extension BeerListViewController {
 
 extension BeerListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let detailsViewModel = BeerDetailViewModel(beer: viewModel.getBeers()[indexPath.row])
+        let detailsViewController = BeerDetailViewController(viewModel: detailsViewModel)
+        detailsViewController.configureBeerDetail(with: viewModel.getBeers()[indexPath.row])
+        navigationController?.pushViewController(detailsViewController, animated: true)
     }
 }
 

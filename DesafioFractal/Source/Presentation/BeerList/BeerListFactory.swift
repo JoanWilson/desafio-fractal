@@ -12,7 +12,8 @@ public enum BeerListFactory {
         let repository = PunkApiClient()
         let useCase = BeerRemoteUseCases(repository: repository)
         let viewModel = BeerListViewModel(beerRemoteUseCases: useCase)
-        let viewController = BeerListViewController(viewModel: viewModel)
+        let view = BeerListView()
+        let viewController = BeerListViewController(view: view, viewModel: viewModel)
         
         return viewController
     }

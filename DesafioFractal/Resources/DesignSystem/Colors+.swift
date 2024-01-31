@@ -33,4 +33,8 @@ extension DesignSystem.Colors {
         return UIColor(named: "Colors/white")!
     }
     
+    static var whiteFont: UIColor {
+        return UIColor(named: "Colors/whiteFont")!
+    }
+    
 }
