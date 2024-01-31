@@ -16,4 +16,5 @@ final class BeerDetailViewModel {
     init(beer: Beer) {
         self.beer = beer
     }
+
 }

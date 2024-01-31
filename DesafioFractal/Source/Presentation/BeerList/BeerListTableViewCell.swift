@@ -21,8 +21,7 @@ final class BeerListTableViewCell: UITableViewCell {
     }()
     
     private lazy var image: UIImageView = {
-        let image = DesignSystem.Images.mockImageCell
-        let imageView = UIImageView(image: image)
+        let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         imageView.backgroundColor = .clear
@@ -81,12 +80,12 @@ final class BeerListTableViewCell: UITableViewCell {
         title.text = beer.name
         subTitle.text = beer.tagline
         
-        guard let beerImageURLString = beer.imageURL,
-              let beerImageURL = URL(string: beerImageURLString) else {
-            print("Beer Image URL Not Found")
-            return
+        if let beerImageURLString = beer.imageURL,
+              let beerImageURL = URL(string: beerImageURLString) {
+            image.load(url: beerImageURL)
+        } else {
+            image.image = DesignSystem.Images.mockImageCell
         }
-        image.load(url: beerImageURL)
     }
 }
 

@@ -29,7 +29,6 @@ final class BeerListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "BeerList"
-        
         setupNavigationBar()
         setupTableView()
         setupBinders()
@@ -57,8 +56,8 @@ final class BeerListViewController: UIViewController {
     }
     
     private func showTableViewLoaded() {
-        contentView.tableView.isHidden = false
         contentView.loadingIndicator.stopAnimating()
+        contentView.tableView.isHidden = false
     }
 }
 
