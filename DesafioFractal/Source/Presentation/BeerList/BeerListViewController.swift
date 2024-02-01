@@ -150,8 +150,14 @@ extension BeerListViewController: UISearchBarDelegate {
     private func showNoResultsIfNotFound() {
         if self.viewModel.beers.isEmpty {
             self.contentView.noResultsView.isHidden = false
+            self.navigationController?.navigationBar.backgroundColor = DesignSystem.Colors.white
+            self.contentView.searchController.searchBar.searchTextField.backgroundColor = .systemBackground
+            self.contentView.searchController.searchBar.tintColor = DesignSystem.Colors.primary
         } else {
             self.contentView.noResultsView.isHidden = true
+            self.navigationController?.navigationBar.backgroundColor = DesignSystem.Colors.primary
+            self.contentView.searchController.searchBar.searchTextField.backgroundColor = DesignSystem.Colors.searchBarBackground
+            self.contentView.searchController.searchBar.tintColor = DesignSystem.Colors.white
         }
     }
 }

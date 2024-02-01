@@ -15,16 +15,35 @@ final class BeerLocalUseCases {
         self.repository = repository
     }
     
-    func getBeerById(_ id: Int) -> Beer {
-        return repository.getBeerById(id)
+    func listAllFavoriteBeer() -> Result<[FavoriteBeer], Error> {
+        do {
+            let beers = try repository.listAllFavoriteBeer()
+            return .success(beers)
+        } catch {
+            return .failure(error)
+        }
     }
     
-    func saveAsFavorite(_ beer: Beer) {
-        return repository.saveAsFavorite(beer)
+    func getBeerById(id: Int) -> FavoriteBeer? {
+        return repository.getFavoriteBeerById(id: Int64(id))
     }
     
-    func removeFromFavorite(_ beer: Beer) {
-        return repository.removeFromFavorite(beer)
+    func saveABeerAsFavorite(using dto: FavoriteBeerDTO) -> Result<FavoriteBeer, Error> {
+        do {
+            let beer = try repository.saveFavoriteBeer(using: dto)
+            return .success(beer)
+        } catch {
+            return .failure(error)
+        }
+    }
+    
+    func deleteBeerById(id: Int) -> Result<Bool, Error> {
+        do {
+            try repository.deleteBeerById(id: Int64(id))
+            return .success(true)
+        } catch {
+            return .failure(error)
+        }
     }
     
 }

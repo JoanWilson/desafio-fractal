@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-final class CoreDataContainer {
+final class CoreDataContainer: BeerLocalRepositoryProtocol {
     
     var container: NSPersistentContainer
     
@@ -37,7 +37,7 @@ final class CoreDataContainer {
         return try viewContext.fetch(fetchRequest)
     }
     
-    func saveFavoriteBeer(using dto: FavoriteBeerDTO) throws {
+    func saveFavoriteBeer(using dto: FavoriteBeerDTO) throws -> FavoriteBeer {
         let favoriteBeer = FavoriteBeer(context: viewContext)
         favoriteBeer.id = dto.id
         favoriteBeer.name = dto.name
@@ -45,7 +45,13 @@ final class CoreDataContainer {
         favoriteBeer.tagline = dto.tagline
         favoriteBeer.image = dto.imageData
         
-        try saveContext()
+        do {
+            try saveContext()
+            return favoriteBeer
+        } catch {
+            throw ErrorFavoriteBeer.unableToSaveData
+        }
+        
     }
     
     func getFavoriteBeerById(id: Int64) -> FavoriteBeer? {

@@ -22,14 +22,14 @@ final class CoreDataManagerTests: XCTestCase {
     
     func test_listAllFavoriteBeer_ShouldReturnAllFavoriteBeers() throws {
         let dto = FavoriteBeerDTO(id: 1, name: "name", tagline: "test", description: "test", imageData: Data())
-        try sut.saveFavoriteBeer(using: dto)
+        _ = try sut.saveFavoriteBeer(using: dto)
         let favoriteBeers = try sut.listAllFavoriteBeer()
         XCTAssertEqual(favoriteBeers.count, 1)
     }
     
     func test_getFavoriteBeerById_ShouldReturnCorrectFavoriteBeer() throws {
         let dto = FavoriteBeerDTO(id: 1, name: "name", tagline: "test", description: "test", imageData: Data())
-        try sut.saveFavoriteBeer(using: dto)
+        _ = try sut.saveFavoriteBeer(using: dto)
         
         guard let retrievedBeer = sut.getFavoriteBeerById(id: dto.id) else {
             XCTFail("No beer found with given ID")
@@ -46,7 +46,7 @@ final class CoreDataManagerTests: XCTestCase {
     
     func test_deleteBeerById_ShouldRemoveFavoriteBeer() throws {
         let dto = FavoriteBeerDTO(id: 1, name: "name", tagline: "test", description: "test", imageData: Data())
-        try sut.saveFavoriteBeer(using: dto)
+        _ = try sut.saveFavoriteBeer(using: dto)
         
         try sut.deleteBeerById(id: dto.id)
         

@@ -8,7 +8,8 @@
 import Foundation
 
 protocol BeerLocalRepositoryProtocol {
-    func getBeerById(_ id: Int) -> Beer
-    func saveAsFavorite(_ beer: Beer)
-    func removeFromFavorite(_ beer: Beer)
+    func listAllFavoriteBeer() throws -> [FavoriteBeer]
+    func saveFavoriteBeer(using dto: FavoriteBeerDTO) throws -> FavoriteBeer
+    func getFavoriteBeerById(id: Int64) -> FavoriteBeer?
+    func deleteBeerById(id: Int64) throws
 }
