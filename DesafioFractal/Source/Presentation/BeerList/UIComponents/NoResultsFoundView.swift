@@ -51,7 +51,7 @@ extension NoResultsFoundView: ViewCoding {
     private func imageViewConstraints() {
         NSLayoutConstraint.activate([
             imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            imageView.topAnchor.constraint(equalTo: self.topAnchor)
         ])
     }
     

@@ -120,7 +120,7 @@ extension BeerListView: ViewCoding {
     
     private func noResultsViewConstraints() {
         NSLayoutConstraint.activate([
-            noResultsView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            noResultsView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 15),
             noResultsView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
             noResultsView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
             noResultsView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)
