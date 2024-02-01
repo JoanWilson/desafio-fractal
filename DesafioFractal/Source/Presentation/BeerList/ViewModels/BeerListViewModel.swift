@@ -32,6 +32,7 @@ final class BeerListViewModel {
             case .success(let fetchedBeers):
                 cacheBeers = fetchedBeers.sorted { $0.name < $1.name }
                 beers = fetchedBeers.sorted { $0.name < $1.name }
+                failedToFetch = false 
             case .failure(let error):
                 failedToFetch = true
                 print(error)

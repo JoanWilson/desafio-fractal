@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BeerDetailViewController: UIViewController {
+final class BeerDetailViewController: UIViewController {
     private var contentView: BeerDetailView = .init()
     private var viewModel: BeerDetailViewModel
     
@@ -41,6 +41,21 @@ class BeerDetailViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Beer Details"
         setupNavigationBar()
+        addBinders()
+    }
+    
+    private func addBinders() {
+        viewModel.$isFavorite.sink { [weak self] isFavorite in
+            guard let self else { return }
+            
+            DispatchQueue.main.async {
+                if isFavorite {
+                    self.favoriteButton.image = DesignSystem.Images.heartIconFill
+                } else {
+                    self.favoriteButton.image = DesignSystem.Images.heartIcon
+                }
+            }
+        }.store(in: &viewModel.cancellable)
     }
 }
 
@@ -85,11 +100,39 @@ extension BeerDetailViewController {
     
     @objc private func favoriteBeer() {
         if !viewModel.isFavorite {
-            favoriteButton.image = DesignSystem.Images.heartIconFill
-            viewModel.isFavorite =  true
+            let imageData = contentView.beerImage.image?.jpegData(compressionQuality: 1.0) ??
+            DesignSystem.Images.mockImageCell.jpegData(compressionQuality: 1.0)!
+            let dto = viewModel.makeDTOWithImageData(imageData: imageData)
+            favoriteBeerAction(dto: dto)
         } else {
-            favoriteButton.image = DesignSystem.Images.heartIcon
-            viewModel.isFavorite = false
+            unfavoriteBeerAction(id: self.viewModel.beer.id)
+        }
+    }
+    
+    private func favoriteBeerAction(dto: FavoriteBeerDTO) {
+        DispatchQueue.global().async {
+            if self.viewModel.favoriteBeer(dto: dto) {
+                DispatchQueue.main.async {
+                    self.favoriteButton.image = DesignSystem.Images.heartIconFill
+                    self.viewModel.isFavorite =  true
+                }
+            } else {
+                self.showErrorAlert(errorMessage: "Failed to mark this beer as favorite")
+            }
+        }
+        
+    }
+    
+    private func unfavoriteBeerAction(id: Int) {
+        DispatchQueue.global().async {
+            if self.viewModel.unfavoriteBeer(id: id) {
+                DispatchQueue.main.async {
+                    self.favoriteButton.image = DesignSystem.Images.heartIcon
+                    self.viewModel.isFavorite = false
+                }
+            } else {
+                self.showErrorAlert(errorMessage: "Failed to remove this beer as favorite")
+            }
         }
     }
 }

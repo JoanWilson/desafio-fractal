@@ -7,12 +7,12 @@
 
 import UIKit
 
-final class BeerListViewController: UIViewController {
+final class FavoriteBeerListViewController: UIViewController {
     
     private var contentView: BeerListView
-    private var viewModel: BeerListViewModel
+    private var viewModel: FavoriteBeerListViewModel
     
-    init(view: BeerListView, viewModel: BeerListViewModel) {
+    init(view: BeerListView, viewModel: FavoriteBeerListViewModel) {
         self.contentView = view
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -28,11 +28,15 @@ final class BeerListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "BeerList"
+        self.title = "FavoriteBeers"
         setupNavigationBar()
         setupTableView()
         setupBinders()
-        viewModel.fetchBeer(page: 1, amount: 25)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.fetchBeer()
     }
     
     private func setupTableView() {
@@ -45,8 +49,15 @@ final class BeerListViewController: UIViewController {
     }
     
     private func beersBinder() {
-        viewModel.$beers.sink { [weak self] _ in
+        viewModel.$beers.sink { [weak self] beers in
             guard let self else { return }
+            
+            if beers.isEmpty {
+                contentView.noResultsView.label.text = "There is no favorite beer found"
+                contentView.noResultsView.isHidden = false
+            } else {
+                contentView.noResultsView.isHidden = true
+            }
             
             DispatchQueue.main.async {
                 self.contentView.tableView.reloadData()
@@ -63,7 +74,7 @@ final class BeerListViewController: UIViewController {
 }
 
 // MARK: - NavigationBar
-extension BeerListViewController {
+extension FavoriteBeerListViewController {
     private func setupNavigationBar() {
         let navigationbarAppearance = UINavigationBarAppearance()
         
@@ -76,7 +87,7 @@ extension BeerListViewController {
         
         self.navigationController?.navigationBar.standardAppearance = navigationbarAppearance
         self.navigationController?.navigationBar.backgroundColor = DesignSystem.Colors.primary
-        
+        self.navigationController?.navigationBar.topItem?.backButtonTitle = ""
         addSearchBar()
     }
     
@@ -87,16 +98,15 @@ extension BeerListViewController {
 }
 
 // MARK: - TableViewController
-extension BeerListViewController: UITableViewDelegate {
+extension FavoriteBeerListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailsViewModel = BeerDetailViewModel(beer: viewModel.beers[indexPath.row])
-        let detailsViewController = BeerDetailViewController(viewModel: detailsViewModel)
-        detailsViewController.configureBeerDetail(with: viewModel.beers[indexPath.row])
+        let favoriteBeer = viewModel.beers[indexPath.row]
+        let detailsViewController = BeerDetailFactory.makeViewController(for: favoriteBeer)
         navigationController?.pushViewController(detailsViewController, animated: true)
     }
 }
 
-extension BeerListViewController: UITableViewDataSource {
+extension FavoriteBeerListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.beers.count
     }
@@ -113,14 +123,14 @@ extension BeerListViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         cell.selectionStyle = .none
-        cell.configureCell(using: viewModel.beers[indexPath.row])
+        cell.configureCellWithData(using: viewModel.beers[indexPath.row])
         
         return cell
     }
 }
 
 // MARK: - SearchController
-extension BeerListViewController: UISearchBarDelegate {
+extension FavoriteBeerListViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         viewModel.isSearching = true
     }
@@ -134,7 +144,6 @@ extension BeerListViewController: UISearchBarDelegate {
         searchBar.resignFirstResponder()
         viewModel.filterBeers(by: "")
         viewModel.isSearching = false
-        showNoResultsIfNotFound()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -144,14 +153,5 @@ extension BeerListViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         viewModel.filterBeers(by: searchText.trimmingCharacters(in: .whitespaces))
-        showNoResultsIfNotFound()
-    }
-    
-    private func showNoResultsIfNotFound() {
-        if self.viewModel.beers.isEmpty {
-            self.contentView.noResultsView.isHidden = false
-        } else {
-            self.contentView.noResultsView.isHidden = true
-        }
     }
 }

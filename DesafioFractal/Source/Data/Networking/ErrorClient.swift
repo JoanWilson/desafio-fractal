@@ -9,4 +9,5 @@ import Foundation
 
 enum ErrorClient: Error {
     case invalidBaseURL
+    case errorRequest
 }
