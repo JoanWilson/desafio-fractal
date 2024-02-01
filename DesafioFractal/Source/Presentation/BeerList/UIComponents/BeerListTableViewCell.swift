@@ -87,6 +87,17 @@ final class BeerListTableViewCell: UITableViewCell {
             image.image = DesignSystem.Images.mockImageCell
         }
     }
+    
+    public func configureCellWithData(using beer: FavoriteBeer) {
+        title.text = beer.name
+        subTitle.text = beer.tagline
+        
+        guard let imageData = beer.image else {
+            image.image = DesignSystem.Images.mockImageCell
+            return 
+        }
+        image.image = UIImage(data: imageData)
+    }
 }
 
 extension BeerListTableViewCell: ViewCoding {

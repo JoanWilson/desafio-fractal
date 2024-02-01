@@ -44,6 +44,7 @@ final class CoreDataContainer: BeerLocalRepositoryProtocol {
         favoriteBeer.descriptionBeer = dto.description
         favoriteBeer.tagline = dto.tagline
         favoriteBeer.image = dto.imageData
+        favoriteBeer.imageURL = dto.imageURL
         
         do {
             try saveContext()

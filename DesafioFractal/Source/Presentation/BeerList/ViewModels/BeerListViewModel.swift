@@ -25,15 +25,15 @@ final class BeerListViewModel {
     }
     
     func fetchBeer(page: Int, amount: Int) {
-        beerRemoteUseCases.getBeers(page: page, amount: amount) { [weak self] result in
-            guard let self = self else { return }
+        beerRemoteUseCases.getBeers(page: page, amount: amount) { result in
             
             switch result {
             case .success(let fetchedBeers):
-                cacheBeers = fetchedBeers.sorted { $0.name < $1.name }
-                beers = fetchedBeers.sorted { $0.name < $1.name }
+                self.cacheBeers = fetchedBeers.sorted { $0.name < $1.name }
+                self.beers = fetchedBeers.sorted { $0.name < $1.name }
+                self.failedToFetch = false
             case .failure(let error):
-                failedToFetch = true
+                self.failedToFetch = true
                 print(error)
             }
         }

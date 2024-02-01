@@ -17,25 +17,19 @@ final class PunkApiClient: BeerRemoteRepository {
 //    }
     
     func getBeers(page: Int, amount: Int, completion: @escaping (Result<[Beer], Error>) -> Void) {
-        
-        // Validate URL
         guard let url = URL(string: self.apiURL) else {
             return completion(.failure(ErrorClient.invalidBaseURL))
         }
         
-        // Build Request
         var request = URLRequest(url: url)
         request.setValue(
             "application/json",
             forHTTPHeaderField: "Content-Type"
         )
         
-        // Send Request
         let task = session.dataTask(with: request) { data, _, error in
             
             if let data = data {
-                
-                // Decode
                 do {
                     let beers = try JSONDecoder().decode([Beer].self, from: data)
                     completion(.success(beers))

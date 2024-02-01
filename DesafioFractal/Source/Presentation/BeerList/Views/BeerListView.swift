@@ -57,7 +57,7 @@ final class BeerListView: UIView {
         return indicator
     }()
     
-    lazy var noResultsView: UIView = {
+    lazy var noResultsView: NoResultsFoundView = {
         let view = NoResultsFoundView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isHidden = true

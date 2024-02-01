@@ -7,14 +7,22 @@
 
 import Foundation
 
-struct Beer: Codable {
+public struct Beer: Codable {
     let id: Int
     let name: String
     let tagline: String
     let description: String
     let imageURL: String?
     
-    enum CodingKeys: String, CodingKey {
+    public init(id: Int, name: String, tagline: String, description: String, imageURL: String?) {
+        self.id = id
+        self.name = name
+        self.tagline = tagline
+        self.description = description
+        self.imageURL = imageURL
+    }
+    
+    public enum CodingKeys: String, CodingKey {
         case id
         case name
         case tagline

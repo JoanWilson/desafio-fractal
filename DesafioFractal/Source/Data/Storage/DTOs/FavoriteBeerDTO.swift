@@ -13,4 +13,5 @@ struct FavoriteBeerDTO {
     let tagline: String
     let description: String
     let imageData: Data
+    let imageURL: String
 }
