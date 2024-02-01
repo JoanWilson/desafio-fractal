@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		851307362B6BE6BA00A9C8D2 /* CoreDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851307352B6BE6BA00A9C8D2 /* CoreDataManagerTests.swift */; };
+		8513073D2B6BF31D00A9C8D2 /* FavoriteBeerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8513073C2B6BF31C00A9C8D2 /* FavoriteBeerDTO.swift */; };
+		8513073F2B6BF3F700A9C8D2 /* FavoriteBeerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8513073E2B6BF3F700A9C8D2 /* FavoriteBeerError.swift */; };
 		851534CC2B62EE1100EB4680 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851534CB2B62EE1100EB4680 /* AppDelegate.swift */; };
 		851534CE2B62EE1100EB4680 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851534CD2B62EE1100EB4680 /* SceneDelegate.swift */; };
 		851534D02B62EE1100EB4680 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851534CF2B62EE1100EB4680 /* ViewController.swift */; };
@@ -37,6 +40,8 @@
 		8549DA7C2B67FF3600DED664 /* BeerDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8549DA7B2B67FF3600DED664 /* BeerDetailViewModel.swift */; };
 		85AF9FC42B6B3D8100F4D35E /* UISearchBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF9FC32B6B3D8100F4D35E /* UISearchBar+.swift */; };
 		85AF9FCB2B6B74FD00F4D35E /* NoResultsFoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF9FCA2B6B74FD00F4D35E /* NoResultsFoundView.swift */; };
+		85AF9FD02B6B826300F4D35E /* FavoriteDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85AF9FCE2B6B826300F4D35E /* FavoriteDatabase.xcdatamodeld */; };
+		85AF9FD22B6B835900F4D35E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF9FD12B6B835900F4D35E /* CoreDataManager.swift */; };
 		85AFC85D2B63866F00E9DE5F /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFC85C2B63866F00E9DE5F /* Beer.swift */; };
 		85AFC8612B6387CD00E9DE5F /* BeerRemoteRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFC8602B6387CD00E9DE5F /* BeerRemoteRepositoryProtocol.swift */; };
 		85AFC8642B6388D700E9DE5F /* BeerRemoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFC8632B6388D700E9DE5F /* BeerRemoteUseCase.swift */; };
@@ -62,6 +67,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		851307352B6BE6BA00A9C8D2 /* CoreDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerTests.swift; sourceTree = "<group>"; };
+		8513073C2B6BF31C00A9C8D2 /* FavoriteBeerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBeerDTO.swift; sourceTree = "<group>"; };
+		8513073E2B6BF3F700A9C8D2 /* FavoriteBeerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBeerError.swift; sourceTree = "<group>"; };
 		851534C82B62EE1100EB4680 /* DesafioFractal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioFractal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		851534CB2B62EE1100EB4680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		851534CD2B62EE1100EB4680 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +105,8 @@
 		85AF9FC32B6B3D8100F4D35E /* UISearchBar+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+.swift"; sourceTree = "<group>"; };
 		85AF9FC62B6B43EB00F4D35E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		85AF9FCA2B6B74FD00F4D35E /* NoResultsFoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultsFoundView.swift; sourceTree = "<group>"; };
+		85AF9FCF2B6B826300F4D35E /* FavoriteDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteDatabase.xcdatamodel; sourceTree = "<group>"; };
+		85AF9FD12B6B835900F4D35E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		85AFC85C2B63866F00E9DE5F /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		85AFC8602B6387CD00E9DE5F /* BeerRemoteRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRemoteRepositoryProtocol.swift; sourceTree = "<group>"; };
 		85AFC8632B6388D700E9DE5F /* BeerRemoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRemoteUseCase.swift; sourceTree = "<group>"; };
@@ -129,6 +139,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		851307342B6BE6A600A9C8D2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				851307352B6BE6BA00A9C8D2 /* CoreDataManagerTests.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8513073B2B6BF30F00A9C8D2 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				8513073C2B6BF31C00A9C8D2 /* FavoriteBeerDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
 		851534BF2B62EE1100EB4680 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +189,7 @@
 		851534E12B62EE1200EB4680 /* DesafioFractalTests */ = {
 			isa = PBXGroup;
 			children = (
+				851307342B6BE6A600A9C8D2 /* Data */,
 				851534E22B62EE1200EB4680 /* DesafioFractalTests.swift */,
 			);
 			path = DesafioFractalTests;
@@ -209,6 +236,7 @@
 		851534FF2B62F2B100EB4680 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				85AF9FCC2B6B7F9A00F4D35E /* Storage */,
 				85AFC86E2B638E2D00E9DE5F /* Networking */,
 			);
 			path = Data;
@@ -313,6 +341,17 @@
 				85AF9FCA2B6B74FD00F4D35E /* NoResultsFoundView.swift */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		85AF9FCC2B6B7F9A00F4D35E /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				8513073B2B6BF30F00A9C8D2 /* DTOs */,
+				85AF9FCE2B6B826300F4D35E /* FavoriteDatabase.xcdatamodeld */,
+				85AF9FD12B6B835900F4D35E /* CoreDataManager.swift */,
+				8513073E2B6BF3F700A9C8D2 /* FavoriteBeerError.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		85AFC85B2B63852F00E9DE5F /* LaunchScreen */ = {
@@ -523,6 +562,7 @@
 				851535202B63348200EB4680 /* Images+.swift in Sources */,
 				851535152B63190A00EB4680 /* BeerListViewModel.swift in Sources */,
 				8549DA7C2B67FF3600DED664 /* BeerDetailViewModel.swift in Sources */,
+				85AF9FD02B6B826300F4D35E /* FavoriteDatabase.xcdatamodeld in Sources */,
 				854083CE2B64DC7600EDA0CB /* UIImageView+.swift in Sources */,
 				854896162B6450F50014C180 /* PunkApiClient.swift in Sources */,
 				854896192B64839D0014C180 /* BeerListTableViewCell.swift in Sources */,
@@ -530,13 +570,16 @@
 				85AF9FCB2B6B74FD00F4D35E /* NoResultsFoundView.swift in Sources */,
 				85AFC8612B6387CD00E9DE5F /* BeerRemoteRepositoryProtocol.swift in Sources */,
 				851534D02B62EE1100EB4680 /* ViewController.swift in Sources */,
+				8513073F2B6BF3F700A9C8D2 /* FavoriteBeerError.swift in Sources */,
 				8549DA7A2B67FBEA00DED664 /* BeerDetailView.swift in Sources */,
 				854083D02B64DF3F00EDA0CB /* ErrorClient.swift in Sources */,
 				8549DA782B67FAE100DED664 /* BeerDetailViewController.swift in Sources */,
 				854083CB2B64D43900EDA0CB /* BeerListFactory.swift in Sources */,
 				85AFC8682B63894E00E9DE5F /* BeerLocalUseCases.swift in Sources */,
+				8513073D2B6BF31D00A9C8D2 /* FavoriteBeerDTO.swift in Sources */,
 				851534CC2B62EE1100EB4680 /* AppDelegate.swift in Sources */,
 				851534CE2B62EE1100EB4680 /* SceneDelegate.swift in Sources */,
+				85AF9FD22B6B835900F4D35E /* CoreDataManager.swift in Sources */,
 				85AFC8642B6388D700E9DE5F /* BeerRemoteUseCase.swift in Sources */,
 				8515350E2B6313F000EB4680 /* FontsEnum.swift in Sources */,
 				85AF9FC42B6B3D8100F4D35E /* UISearchBar+.swift in Sources */,
@@ -547,6 +590,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				851307362B6BE6BA00A9C8D2 /* CoreDataManagerTests.swift in Sources */,
 				851534E32B62EE1200EB4680 /* DesafioFractalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -883,6 +927,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		85AF9FCE2B6B826300F4D35E /* FavoriteDatabase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				85AF9FCF2B6B826300F4D35E /* FavoriteDatabase.xcdatamodel */,
+			);
+			currentVersion = 85AF9FCF2B6B826300F4D35E /* FavoriteDatabase.xcdatamodel */;
+			path = FavoriteDatabase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 851534C02B62EE1100EB4680 /* Project object */;
 }
