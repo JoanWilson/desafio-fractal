@@ -24,4 +24,46 @@ extension UIViewController {
         alert.addAction(okButton)
         self.present(alert, animated: true)
     }
+    
+    func showLoadingAnimation() {
+        
+        ///BackgroundView
+        let backgroundView = UIView()
+        backgroundView.tag = 212121
+        backgroundView.backgroundColor = .black.withAlphaComponent(0.6)
+        backgroundView.translatesAutoresizingMaskIntoConstraints = false
+        
+        ///LoadingView
+        let loadingView = UIActivityIndicatorView(style: .large)
+        loadingView.tag = 222222
+        loadingView.translatesAutoresizingMaskIntoConstraints = false
+        
+        ///Add SubView and Constraints
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            
+            self.view.addSubview(backgroundView)
+            backgroundView.addSubview(loadingView)
+            self.view.bringSubviewToFront(backgroundView)
+            
+            NSLayoutConstraint.activate([
+                backgroundView.widthAnchor.constraint(equalToConstant: self.view.frame.size.width),
+                backgroundView.heightAnchor.constraint(equalToConstant: self.view.frame.size.height),
+                backgroundView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                backgroundView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+                loadingView.widthAnchor.constraint(equalToConstant: 60),
+                loadingView.heightAnchor.constraint(equalToConstant: 60),
+                loadingView.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
+                loadingView.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor)
+            ])
+        }
+        
+        ///Start Animation
+        loadingView.startAnimating()
+    }
+    
+    func hideLoadingAnimation() {
+        if let background = view.viewWithTag(212121) {
+            background.removeFromSuperview()
+        }
+    }
 }

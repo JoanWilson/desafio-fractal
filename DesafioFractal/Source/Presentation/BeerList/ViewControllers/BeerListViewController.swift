@@ -32,6 +32,7 @@ final class BeerListViewController: UIViewController {
         setupNavigationBar()
         setupTableView()
         setupBinders()
+        self.contentView.loadingIndicator.startAnimating()
         viewModel.fetchBeer(page: 1, amount: 25)
     }
     
@@ -63,10 +64,12 @@ final class BeerListViewController: UIViewController {
             
             DispatchQueue.main.async {
                 if isFailed {
-                    self.contentView.noResultsView.label.text = "Failed to download data"
-                    self.contentView.noResultsView.isHidden = false
+                    self.contentView.loadingIndicator.startAnimating()
+                    self.showAlertWithAction(title: "Failed to Connect to internet", message: "Try Again") {
+                        self.viewModel.fetchBeer(page: 1, amount: 25)
+                    }
                 } else {
-                    self.contentView.noResultsView.isHidden = true
+                    self.contentView.loadingIndicator.stopAnimating()
                 }
             }
         }.store(in: &viewModel.cancellable)

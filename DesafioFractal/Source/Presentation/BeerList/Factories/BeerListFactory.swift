@@ -9,7 +9,7 @@ import UIKit
 
 public enum BeerListFactory {
     static public func makeViewController() -> UIViewController {
-        let repository = PunkApiClient()
+        let repository = PunkApiClient(apiURL: "https://api.punkapi.com/v2/beers?page=1", session: URLSession(configuration: .default))
         let useCase = BeerRemoteUseCases(repository: repository)
         let viewModel = BeerListViewModel(beerRemoteUseCases: useCase)
         let view = BeerListView()
