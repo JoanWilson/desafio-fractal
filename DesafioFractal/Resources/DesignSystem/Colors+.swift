@@ -37,4 +37,8 @@ extension DesignSystem.Colors {
         return UIColor(named: "Colors/whiteFont")!
     }
     
+    static var searchBarBackground: UIColor {
+        return UIColor(named: "Colors/searchBarBackground")!
+    }
+    
 }
