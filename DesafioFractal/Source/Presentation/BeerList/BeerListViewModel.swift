@@ -12,6 +12,9 @@ final class BeerListViewModel {
     
     @Published private(set) var beers: [Beer] = []
     @Published private(set) var failedToFetch: Bool = false
+    private var cacheBeers: [Beer] = []
+    
+    var isSearching: Bool = false
     var cancellable: Set<AnyCancellable> = []
     var beerListTableViewHeight: CGFloat = 90
     
@@ -27,8 +30,8 @@ final class BeerListViewModel {
             
             switch result {
             case .success(let fetchedBeers):
-                beers = fetchedBeers
-                print("called")
+                cacheBeers = fetchedBeers.sorted { $0.name < $1.name }
+                beers = fetchedBeers.sorted { $0.name < $1.name }
             case .failure(let error):
                 failedToFetch = true
                 print(error)
@@ -36,7 +39,10 @@ final class BeerListViewModel {
         }
     }
     
-    func getBeers() -> [Beer] {
-        return beers.sorted { $0.name! < $1.name! }
+    func filterBeers(by inputText: String) {
+        beers = inputText.isEmpty ? cacheBeers : cacheBeers.filter {
+            $0.name.lowercased().contains(inputText.lowercased())
+        }
     }
+    
 }

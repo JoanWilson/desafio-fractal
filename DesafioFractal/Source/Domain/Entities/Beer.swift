@@ -9,7 +9,7 @@ import Foundation
 
 struct Beer: Codable {
     let id: Int?
-    let name: String?
+    let name: String
     let tagline: String?
     let description: String?
     let imageURL: String?

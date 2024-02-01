@@ -9,6 +9,26 @@ import UIKit
 
 final class BeerListView: UIView {
     
+    private lazy var backgroundHeader: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = DesignSystem.Colors.white
+        
+        return view
+    }()
+    
+    lazy var searchController: UISearchController = {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.tintColor = DesignSystem.Colors.white
+        searchController.searchBar.placeholder = "Search Beers..."
+        searchController.searchBar.setValue("Cancel", forKey: "cancelButtonText")
+
+        searchController.searchBar.searchBarStyle = .prominent
+        searchController.searchBar.searchTextField.backgroundColor = DesignSystem.Colors.searchBarBackground
+
+        return searchController
+    }()
+    
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.isHidden = true
@@ -37,6 +57,14 @@ final class BeerListView: UIView {
         return indicator
     }()
     
+    lazy var noResultsView: UIView = {
+        let view = NoResultsFoundView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.isHidden = true
+        
+        return view
+    }()
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         setupView()
@@ -50,13 +78,17 @@ final class BeerListView: UIView {
 
 extension BeerListView: ViewCoding {
     func setupHierarchy() {
+        addSubview(backgroundHeader)
         addSubview(tableView)
         addSubview(loadingIndicator)
+        addSubview(noResultsView)
     }
     
     func setupConstraints() {
-        self.tableViewConstraints()
-        self.loadingIndicatorConstraints()
+        tableViewConstraints()
+        loadingIndicatorConstraints()
+        backgroundHeaderConstraints()
+        noResultsViewConstraints()
     }
     
     private func tableViewConstraints() {
@@ -76,4 +108,23 @@ extension BeerListView: ViewCoding {
             loadingIndicator.trailingAnchor.constraint(equalTo: self.trailingAnchor)
         ])
     }
+    
+    private func backgroundHeaderConstraints() {
+        NSLayoutConstraint.activate([
+            backgroundHeader.topAnchor.constraint(equalTo: self.topAnchor, constant: 90),
+            backgroundHeader.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            backgroundHeader.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            backgroundHeader.bottomAnchor.constraint(equalTo: tableView.topAnchor)
+        ])
+    }
+    
+    private func noResultsViewConstraints() {
+        NSLayoutConstraint.activate([
+            noResultsView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            noResultsView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
+            noResultsView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
+            noResultsView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)
+        ])
+    }
+    
 }
