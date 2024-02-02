@@ -19,7 +19,7 @@ final class BeerDetailViewModel {
         self.beer = beer
         self.useCases = useCases
         
-        guard let beer = useCases.getBeerById(id: beer.id) else {
+        guard useCases.getBeerById(id: beer.id) != nil else {
             isFavorite = false
             return
         }
