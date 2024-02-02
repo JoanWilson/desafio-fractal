@@ -13,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         self.registerCustomFonts()
-//        self.setupNavigationBar()
         return true
     }
 
@@ -34,35 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate {
-//    private func setupNavigationBar() {
-//        let navigationBarAppearance = UINavigationBarAppearance()
-//        self.setupNavigationBarFont(navigationBarAppearance)
-//        self.setupBackButton(navigationBarAppearance)
-//        navigationBarAppearance.backgroundColor = DesignSystem.Tokens.Colors.primary
-//                
-//    }
-//    
     private func registerCustomFonts() {
         let fonts = Bundle.main.urls(forResourcesWithExtension: "ttf", subdirectory: nil)
         fonts?.forEach({ url in
             CTFontManagerRegisterFontsForURL(url as CFURL, .process, nil)
         })
     }
-//    
-//    private func setupNavigationBarFont(_ navigationBarAppearance: UINavigationBarAppearance) {
-//        let montserratFont: UIFont = DesignSystem.Tokens.Fonts.montserratSemiBold(20)
-//        
-//        navigationBarAppearance.titleTextAttributes = [
-//            NSAttributedString.Key.foregroundColor: DesignSystem.Tokens.Colors.white,
-//            NSAttributedString.Key.font: montserratFont
-//        ]
-//    }
-//    
-//    private func setupBackButton(_ navigationBarAppearance: UINavigationBarAppearance) {
-////        navigationBarAppearance.topItem?.backButtonTitle = ""
-////        navigationBarAppearance.backItem?.title = ""
-////        navigationBarAppearance.tintColor = .white
-//        navigationBarAppearance.backgroundColor = DesignSystem.Tokens.Colors.primary
-//    }
-
 }
