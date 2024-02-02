@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol BeerLocalRepositoryProtocol {
+protocol BeerLocalRepository {
     func listAllFavoriteBeer() throws -> [FavoriteBeer]
     func saveFavoriteBeer(using dto: FavoriteBeerDTO) throws -> FavoriteBeer
     func getFavoriteBeerById(id: Int64) -> FavoriteBeer?

@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-final class CoreDataContainer: BeerLocalRepositoryProtocol {
+final class CoreDataContainer: BeerLocalRepository {
     
     var container: NSPersistentContainer
     

@@ -9,9 +9,9 @@ import Foundation
 
 final class BeerLocalUseCases {
     
-    private let repository: BeerLocalRepositoryProtocol
+    private let repository: BeerLocalRepository
     
-    init(repository: BeerLocalRepositoryProtocol) {
+    init(repository: BeerLocalRepository) {
         self.repository = repository
     }
     
