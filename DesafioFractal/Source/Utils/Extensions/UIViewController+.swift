@@ -27,18 +27,15 @@ extension UIViewController {
     
     func showLoadingAnimation() {
         
-        ///BackgroundView
         let backgroundView = UIView()
         backgroundView.tag = 212121
         backgroundView.backgroundColor = .black.withAlphaComponent(0.6)
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
         
-        ///LoadingView
         let loadingView = UIActivityIndicatorView(style: .large)
         loadingView.tag = 222222
         loadingView.translatesAutoresizingMaskIntoConstraints = false
         
-        ///Add SubView and Constraints
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             
             self.view.addSubview(backgroundView)
@@ -57,7 +54,6 @@ extension UIViewController {
             ])
         }
         
-        ///Start Animation
         loadingView.startAnimating()
     }
     
