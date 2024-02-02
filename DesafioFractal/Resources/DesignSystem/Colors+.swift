@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension DesignSystem.Tokens.Colors {
+extension DesignSystem.Colors {
     
     static var primary: UIColor {
         return UIColor(named: "Colors/primary")!
@@ -15,6 +15,10 @@ extension DesignSystem.Tokens.Colors {
     
     static var secondary: UIColor {
         return UIColor(named: "Colors/secondary")!
+    }
+    
+    static var lightGray: UIColor {
+        return UIColor(named: "Colors/lightGray")!
     }
     
     static var gray: UIColor {
@@ -27,6 +31,14 @@ extension DesignSystem.Tokens.Colors {
     
     static var white: UIColor {
         return UIColor(named: "Colors/white")!
+    }
+    
+    static var whiteFont: UIColor {
+        return UIColor(named: "Colors/whiteFont")!
+    }
+    
+    static var searchBarBackground: UIColor {
+        return UIColor(named: "Colors/searchBarBackground")!
     }
     
 }
